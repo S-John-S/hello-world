@@ -4,8 +4,11 @@
 <form action="welcome.php" method="post">
 Name: <input type="text" name="name"><br>
 E-mail: <input type="text" name="email"><br>
-<input type="submit">
+PDB: <input  type ="file" accept=".pdb" id="pdb_file" name ="file"><br>
+ <input type="submit">
 </form>
-
+<?php
+ echo exec("date");
+?>
 </body>
 </html> 
