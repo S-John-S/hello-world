@@ -33,7 +33,7 @@ echo "</pre>";
     	///echo "Error in command";    // if unsuccessful display error
 	///}
 	///echo "</pre>";
-	passthru("pdb_std -i $pdb_file $option > $output 2>&1");
+	passthru("./pdb_std -i $pdb_file $option > $output 2>&1");
 	$output_file = fopen($output, "r");
 	$content = fread($output_file, filesize($output));
 	$lines = explode("\n", $content);
