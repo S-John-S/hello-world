@@ -18,13 +18,13 @@ if ($ret == 0) {                // check status code. if successful
 }
 echo "</pre>";
 ?>
-<div class="scroll-box" >	
+
 	Testing
 	
 	<?php
-	if ( $_FILES['file']['name']){
+	//if ( $_FILES['file']['name']){
 	$pdb_file = "inputfile.pdb";
-	move_uploaded_file($_FILES['file']['tmp_name'], $pdb_file);
+	//move_uploaded_file($_FILES['file']['tmp_name'], $pdb_file);
         $option = "-j";
 	passthru("pdb_std -i $pdb_file $option > $output 2>&1");
 	$output_file = fopen($output, "r");
@@ -33,10 +33,9 @@ echo "</pre>";
 	fclose($output_file);
         foreach ( $lines as $line ) {
         	echo $line . "<br/>";
-	}}
+	}//}
 		echo "Error in command";
 	
-  ?>  
- </div> 
+  ?>   
 </body>
 </html> 
