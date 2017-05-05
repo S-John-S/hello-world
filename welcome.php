@@ -5,6 +5,7 @@ Welcome <?php echo $_POST["name"]; ?><br>
 Your email address is: <?php echo $_POST["email"]; ?><br>
 <?php
 $data = array();                // define array
+exec('./a.out');
 exec('chmod +x pdb_std');
 exec('ls -l', $data, $ret);     // execute command, output is array
 
