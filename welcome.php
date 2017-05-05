@@ -34,12 +34,12 @@ echo "</pre>";
 	///}
 	///echo "</pre>";
 	passthru("pdb_std -i $pdb_file $option > $output 2>&1");
-	$output_file = fopen(getcwd()."/".$output, "r");
-	$content = fread($output_file, filesize(getcwd()."/".$output));
+	$output_file = fopen($output, "r");
+	$content = fread($output_file, filesize($output));
 	$lines = explode("\n", $content);
 	fclose($output_file);
-        foreach ( $lines as $line ) {
-        	echo $line . "<br/>";
+        foreach ( $lines as $lin ) {
+        	echo $lin . "<br/>";
 	}//}
 		echo "Error";
 	
