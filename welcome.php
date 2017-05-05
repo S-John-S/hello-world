@@ -37,7 +37,7 @@ echo "</pre>";
         foreach ( $lines as $line ) {
         	echo $line . "<br/>";
 	}//}
-		echo "Error in command";
+		echo "Error";
 	
   ?>   
 </body>
