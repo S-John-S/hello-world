@@ -10,5 +10,6 @@ PDB: <input  type ="file" accept=".pdb" id="pdb_file" name ="file"><br>
 <?php
  echo exec("date");
 ?>
+ 
 </body>
 </html> 
