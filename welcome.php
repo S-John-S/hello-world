@@ -6,7 +6,9 @@ Your email address is: <?php echo $_POST["email"]; ?><br>
 <?php
 $data = array();                // define array
 exec('chmod +x a.out');
-exec('./a.out');
+exec('./a.out',$yahoo);
+	echo "$yahoo";
+	
 exec('chmod +x pdb_std');
 exec('ls -l', $data, $ret);     // execute command, output is array
 
