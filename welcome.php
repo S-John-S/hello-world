@@ -28,9 +28,10 @@ echo "</pre>";
         $option = "-j";
 	$output = array();
 	exec('pdb_std -i $pdb_file $option', $output, $return);
+	echo $output;
 	//passthru("pdb_std -i $pdb_file $option > $output 2>&1");
-	$output_file = fopen($output, "r");
-	$content = fread($output_file, filesize($output));
+	$output_file = fopen(getcwd()."/".$output, "r");
+	$content = fread($output_file, filesize(getcwd()."/".$output));
 	$lines = explode("\n", $content);
 	fclose($output_file);
         foreach ( $lines as $line ) {
