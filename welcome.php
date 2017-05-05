@@ -17,11 +17,7 @@ if ($ret == 0) {                // check status code. if successful
     echo "Error in command";    // if unsuccessful display error
 }
 echo "</pre>";
-?>
 
-	Testing
-	
-	<?php
 	//if ( $_FILES['file']['name']){
 	//$pdb_file = "inputfile.pdb";
 	//move_uploaded_file($_FILES['file']['tmp_name'], $pdb_file);
