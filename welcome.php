@@ -31,9 +31,9 @@ echo "</pre>";
 	fclose($output_file);
         foreach ( $lines as $line ) {
         	echo $line . "<br/>";
-	}
+	}}
 		echo "Error in command";
-	}
+	
   ?>  
  </div> 
 </body>
