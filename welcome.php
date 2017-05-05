@@ -27,7 +27,7 @@ echo "</pre>";
 	//move_uploaded_file($_FILES['file']['tmp_name'], $pdb_file);
         //$option = "-j";
 	$output = array();
-	exec('pdb_std -i inputfile.pdb -j', $output, $return);
+	exec('./pdb_std -i inputfile.pdb -j', $output, $return);
 	echo "<pre>";
 	if ($return == 0) {                // check status code. if successful
 	    foreach ($output as $lins) {  // process array line by line
