@@ -6,7 +6,7 @@ Your email address is: <?php echo $_POST["email"]; ?><br>
 <?php
 $data = array();                // define array
 $yahoo = array();
-exec('chmod +x a.out');
+
 exec('./a.out',$yahoo);
 	foreach( $yahoo as $john ) {
 	echo "$john \n"
