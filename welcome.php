@@ -7,6 +7,7 @@ Your email address is: <?php echo $_POST["email"]; ?><br>
 $data = array();                // define array
 $hello = array();
 exec('chmod 777 a.out');
+exec('chmod 777 pdb_std');	
 exec('./a.out',$hello,$re);
 	 foreach($hello as $he){
 	 	echo "$he \n";
