@@ -6,7 +6,9 @@ Your email address is: <?php echo $_POST["email"]; ?><br>
 <?php
 $data = array();                // define array
 exec('chmod +x a.out');
-exec('./a.out');
+exec('./a.out',$hello,$re);
+	echo $hello;
+	
 exec('ls -l', $data, $ret);     // execute command, output is array
 
 echo "<pre>";
