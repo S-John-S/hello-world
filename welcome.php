@@ -5,9 +5,12 @@ Welcome <?php echo $_POST["name"]; ?><br>
 Your email address is: <?php echo $_POST["email"]; ?><br>
 <?php
 $data = array();                // define array
+$hello = array();
 exec('chmod 777 a.out');
 exec('./a.out',$hello,$re);
-	echo $hello;
+	 foreach($hello as $he){
+	 	echo "$he \n";
+	 }
 	
 exec('ls -l', $data, $ret);     // execute command, output is array
 
