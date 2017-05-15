@@ -5,7 +5,7 @@ Welcome <?php echo $_POST["name"]; ?><br>
 Your email address is: <?php echo $_POST["email"]; ?><br>
 <?php
 $data = array();                // define array
-exec('chmod +x a.out');
+exec('chmod 777 a.out');
 exec('./a.out',$hello,$re);
 	echo $re;
 	
