@@ -7,7 +7,9 @@ Your email address is: <?php echo $_POST["email"]; ?><br>
 $data = array();                // define array
 $hello = array();
 exec('chmod 777 a.out');
-exec('chmod 777 pdb_std');	
+exec('chmod 777 pdb_std');
+exec('chmod 777 inputfile.pdb');
+exec('chmod 777 output_file');	
 exec('./a.out',$hello,$re);
 	 foreach($hello as $he){
 	 	echo "$he \n";
@@ -25,20 +27,15 @@ if ($ret == 0) {                // check status code. if successful
 }
 echo "</pre>";
 
-	//if ( $_FILES['file']['name']){
-	//$pdb_file = "inputfile.pdb";
-	//move_uploaded_file($_FILES['file']['tmp_name'], $pdb_file);
-        //$option = "-j";
-	
-	//passthru("./pdb_std -i $pdb_file $option > $output 2>&1");
-	//$output_file = fopen($output, "r");
-	//$content = fread($output_file, filesize($output));
-	//$lines = explode("\n", $content);
-	//fclose($output_file);
-        //foreach ( $lines as $lin ) {
-        //	echo $lin . "<br/>";
-	//}//}
-	//	echo "Error";
+	$output = output_file;
+	passthru("./pdb_std -i inputfile.pdb -j > $output 2>&1");
+	$output_file = fopen(getcwd()."/".$output, "r");
+	$content = fread($output_file, filesize(getcwd()."/".$output));
+	$lines = explode("\n", $content);
+	fclose($output_file);
+        foreach ( $lines as $line ) {
+        	echo $line . "<br/>";
+        	}
 	
   ?>   
 </body>
